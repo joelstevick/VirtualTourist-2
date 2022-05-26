@@ -17,6 +17,8 @@
 		93D68F23284031C900B158B3 /* MapViewController+MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F22284031C900B158B3 /* MapViewController+MapViewDelegate.swift */; };
 		93D68F272840353D00B158B3 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F262840353D00B158B3 /* Keys.swift */; };
 		93D68F2A28403BB100B158B3 /* MKZoomLevel in Frameworks */ = {isa = PBXBuildFile; productRef = 93D68F2928403BB100B158B3 /* MKZoomLevel */; };
+		93D68F362840486600B158B3 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F342840486600B158B3 /* Location+CoreDataClass.swift */; };
+		93D68F372840486600B158B3 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F352840486600B158B3 /* Location+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		93D68F1A28402DAB00B158B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93D68F22284031C900B158B3 /* MapViewController+MapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MapViewDelegate.swift"; sourceTree = "<group>"; };
 		93D68F262840353D00B158B3 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		93D68F342840486600B158B3 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		93D68F352840486600B158B3 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 		93D68F242840348A00B158B3 /* CoreData Model */ = {
 			isa = PBXGroup;
 			children = (
+				93D68F342840486600B158B3 /* Location+CoreDataClass.swift */,
+				93D68F352840486600B158B3 /* Location+CoreDataProperties.swift */,
 				93D68F1228402DAA00B158B3 /* VirtualTourist_2.xcdatamodeld */,
 			);
 			path = "CoreData Model";
@@ -195,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D68F372840486600B158B3 /* Location+CoreDataProperties.swift in Sources */,
+				93D68F362840486600B158B3 /* Location+CoreDataClass.swift in Sources */,
 				93D68F0E28402DAA00B158B3 /* MapViewController.swift in Sources */,
 				93D68F272840353D00B158B3 /* Keys.swift in Sources */,
 				93D68F23284031C900B158B3 /* MapViewController+MapViewDelegate.swift in Sources */,
