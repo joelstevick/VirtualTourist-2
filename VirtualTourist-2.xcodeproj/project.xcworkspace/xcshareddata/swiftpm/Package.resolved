@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mkzoomlevel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stleamist/MKZoomLevel.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "747a37bd2edb30b6685df4069e7e4677c46f7712"
+      }
+    }
+  ],
+  "version" : 2
+}
