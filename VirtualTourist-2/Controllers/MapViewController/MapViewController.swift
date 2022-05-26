@@ -15,6 +15,8 @@ class MapViewController: UIViewController {
     
     var centerCoordinate: CLLocationCoordinate2D?
     
+    let dataController = DataController(modelName: "VirtualTourist_2")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +31,16 @@ class MapViewController: UIViewController {
             mapView.setCenter(CLLocationCoordinate2D(latitude: latitude, longitude: longitude), animated: true)
             mapView.zoomLevel = zoomLevel
         }
+        
+        // Setup longpress for MapView
+        let lpgr = UILongPressGestureRecognizer(target: self,
+                                                action:#selector(self.handleLongPress))
+        lpgr.minimumPressDuration = 1
+        lpgr.delaysTouchesBegan = true
+        lpgr.delegate = self
+        
+        self.mapView.addGestureRecognizer(lpgr)
+        
             
     }
     
