@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import MKZoomLevel
 
 extension MapViewController: MKMapViewDelegate  {
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
@@ -19,5 +20,6 @@ extension MapViewController: MKMapViewDelegate  {
         let defaults = UserDefaults.standard
         defaults.set(centerCoordinate?.latitude, forKey: Key.mapCenterLatitude.rawValue)
         defaults.set(centerCoordinate?.longitude, forKey: Key.mapCenterLongitude.rawValue)
+        defaults.set(mapView.zoomLevel, forKey: Key.mapZoomLevel.rawValue)
     }
 }

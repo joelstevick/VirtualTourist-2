@@ -23,8 +23,11 @@ class MapViewController: UIViewController {
         // recover map center
         let defaults = UserDefaults.standard
         if let latitude = defaults.object(forKey: Key.mapCenterLatitude.rawValue) as? Double,
-           let longitude = defaults.object(forKey: Key.mapCenterLongitude.rawValue) as? Double {
+           let longitude = defaults.object(forKey: Key.mapCenterLongitude.rawValue) as? Double,
+           let zoomLevel = defaults.object(forKey: Key.mapZoomLevel.rawValue) as? Double
+        {
             mapView.setCenter(CLLocationCoordinate2D(latitude: latitude, longitude: longitude), animated: true)
+            mapView.zoomLevel = zoomLevel
         }
             
     }

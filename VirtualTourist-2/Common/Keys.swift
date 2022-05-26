@@ -10,4 +10,5 @@ import Foundation
 enum Key: String {
     case mapCenterLatitude
     case mapCenterLongitude
+    case mapZoomLevel
 }

@@ -16,6 +16,7 @@
 		93D68F1928402DAB00B158B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D68F1728402DAB00B158B3 /* LaunchScreen.storyboard */; };
 		93D68F23284031C900B158B3 /* MapViewController+MapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F22284031C900B158B3 /* MapViewController+MapViewDelegate.swift */; };
 		93D68F272840353D00B158B3 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F262840353D00B158B3 /* Keys.swift */; };
+		93D68F2A28403BB100B158B3 /* MKZoomLevel in Frameworks */ = {isa = PBXBuildFile; productRef = 93D68F2928403BB100B158B3 /* MKZoomLevel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D68F2A28403BB100B158B3 /* MKZoomLevel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +126,9 @@
 			dependencies = (
 			);
 			name = "VirtualTourist-2";
+			packageProductDependencies = (
+				93D68F2928403BB100B158B3 /* MKZoomLevel */,
+			);
 			productName = "VirtualTourist-2";
 			productReference = 93D68F0628402DAA00B158B3 /* VirtualTourist-2.app */;
 			productType = "com.apple.product-type.application";
@@ -152,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 93D68EFD28402DAA00B158B3;
+			packageReferences = (
+				93D68F2828403BB100B158B3 /* XCRemoteSwiftPackageReference "MKZoomLevel" */,
+			);
 			productRefGroup = 93D68F0728402DAA00B158B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -400,6 +408,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93D68F2828403BB100B158B3 /* XCRemoteSwiftPackageReference "MKZoomLevel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/MKZoomLevel.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93D68F2928403BB100B158B3 /* MKZoomLevel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93D68F2828403BB100B158B3 /* XCRemoteSwiftPackageReference "MKZoomLevel" */;
+			productName = MKZoomLevel;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		93D68F1228402DAA00B158B3 /* VirtualTourist_2.xcdatamodeld */ = {
