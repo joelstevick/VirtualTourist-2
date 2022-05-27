@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constants {
-    public static let sideLength = 120.0
+    public static let sideLength = 100.0
 }
