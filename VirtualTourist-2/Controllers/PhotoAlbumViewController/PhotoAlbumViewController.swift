@@ -14,8 +14,9 @@ class PhotoAlbumViewController: UIViewController {
     var location: Location!
     var dataController: DataController!
     var photoUrls = [String]()
-    
     var photoDownloads: [PhotoDownload]?
+    
+    @IBOutlet weak var noPicsLabel: UILabel!
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -24,6 +25,7 @@ class PhotoAlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        noPicsLabel.isHidden = true
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(PhotoAlbumCollectionViewCell.nib(),
@@ -58,6 +60,10 @@ class PhotoAlbumViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
+                
+                if self.photoDownloads?.count == 0 {
+                    self.noPicsLabel.isHidden = false
+                }
             }
             collectionView.reloadData()
         }

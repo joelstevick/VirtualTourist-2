@@ -77,10 +77,17 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-uY-38l">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No pictures for this location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91d-8C-kqu" userLabel="Label - no pictures">
+                                <rect key="frame" x="102" y="437.5" width="210" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5N-j7-BMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="91d-8C-kqu" firstAttribute="centerX" secondItem="1Ud-4C-u3n" secondAttribute="centerX" id="7WI-Gp-UBL"/>
                             <constraint firstItem="VNr-uY-38l" firstAttribute="centerY" secondItem="1Ud-4C-u3n" secondAttribute="centerY" id="7Zu-7u-3gy"/>
                             <constraint firstItem="Ycq-td-t9T" firstAttribute="top" secondItem="Y5N-j7-BMe" secondAttribute="top" constant="-50" id="HNb-w1-t66"/>
                             <constraint firstItem="evQ-NF-nAw" firstAttribute="top" secondItem="Ycq-td-t9T" secondAttribute="bottom" id="OBC-vj-EM0"/>
@@ -88,6 +95,7 @@
                             <constraint firstItem="Y5N-j7-BMe" firstAttribute="bottom" secondItem="evQ-NF-nAw" secondAttribute="bottom" constant="5" id="SCB-0Y-jxq"/>
                             <constraint firstItem="VNr-uY-38l" firstAttribute="centerX" secondItem="1Ud-4C-u3n" secondAttribute="centerX" id="Zr7-pS-dfz"/>
                             <constraint firstItem="Ycq-td-t9T" firstAttribute="leading" secondItem="Y5N-j7-BMe" secondAttribute="leading" id="h3M-wx-Woy"/>
+                            <constraint firstItem="91d-8C-kqu" firstAttribute="centerY" secondItem="1Ud-4C-u3n" secondAttribute="centerY" id="n7J-EI-vN5"/>
                             <constraint firstItem="Ycq-td-t9T" firstAttribute="trailing" secondItem="Y5N-j7-BMe" secondAttribute="trailing" id="nL1-V8-wBG"/>
                             <constraint firstItem="evQ-NF-nAw" firstAttribute="trailing" secondItem="Y5N-j7-BMe" secondAttribute="trailing" id="yFu-3r-AxS"/>
                         </constraints>
@@ -97,6 +105,7 @@
                         <outlet property="activityIndicator" destination="VNr-uY-38l" id="gha-yj-z9V"/>
                         <outlet property="collectionView" destination="evQ-NF-nAw" id="3az-Iy-I8V"/>
                         <outlet property="mapView" destination="Ycq-td-t9T" id="Jze-fV-9MS"/>
+                        <outlet property="noPicsLabel" destination="91d-8C-kqu" id="Ro3-tO-E7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ9-ar-4Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
