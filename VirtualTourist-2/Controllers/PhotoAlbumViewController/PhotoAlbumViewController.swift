@@ -14,6 +14,7 @@ class PhotoAlbumViewController: UIViewController {
     var location: Location!
     var dataController: DataController!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
