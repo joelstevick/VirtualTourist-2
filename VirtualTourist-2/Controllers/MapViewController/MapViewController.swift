@@ -17,6 +17,10 @@ class MapViewController: UIViewController {
     
     let dataController = DataController(modelName: "VirtualTourist_2")
     
+    var saveObserverToken: Any?
+    
+    var savedAnnotations: [AnnotationWithLocation]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +48,9 @@ class MapViewController: UIViewController {
         lpgr.delegate = self
         
         self.mapView.addGestureRecognizer(lpgr)
+        
+        // listen for model changes
+        addSaveNotificationObserver()
         
         // initialize the view model
         load()

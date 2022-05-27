@@ -28,6 +28,7 @@ extension MapViewController {
         }
     
     func load() {
+
         // get the current locations
         let fetchRequest: NSFetchRequest<Location> = Location.fetchRequest()
         
