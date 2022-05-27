@@ -28,6 +28,7 @@
 		93D68F492840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F482840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift */; };
 		93D68F4C2840C5B000B158B3 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */; };
 		93D68F4E2840C6AE00B158B3 /* MapViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4D2840C6AE00B158B3 /* MapViewController+Utilities.swift */; };
+		93D68F502840CB7800B158B3 /* restore-map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4F2840CB7800B158B3 /* restore-map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		93D68F482840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapViewController+CoreData+Notifications.swift"; sourceTree = "<group>"; };
 		93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 		93D68F4D2840C6AE00B158B3 /* MapViewController+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapViewController+Utilities.swift"; sourceTree = "<group>"; };
+		93D68F4F2840CB7800B158B3 /* restore-map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "restore-map.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				93D68F4328404A7700B158B3 /* ShowError.swift */,
+				93D68F4F2840CB7800B158B3 /* restore-map.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				93D68F0C28402DAA00B158B3 /* SceneDelegate.swift in Sources */,
 				93D68F39284048FF00B158B3 /* MapViewController+Gestures.swift in Sources */,
 				93D68F1428402DAA00B158B3 /* VirtualTourist_2.xcdatamodeld in Sources */,
+				93D68F502840CB7800B158B3 /* restore-map.swift in Sources */,
 				93D68F492840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
