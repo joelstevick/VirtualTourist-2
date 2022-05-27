@@ -19,8 +19,11 @@ class PhotoAlbumCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    public func configure(image: UIImage?, loading: Bool) {
-        imageView.image = image
+    public func configure(cgImage: CGImage?, loading: Bool) {
+        if let cgImage = cgImage {
+            imageView.image = UIImage(cgImage: cgImage)
+        }
+       
         imageView.isHidden = loading
         
         activityIndicator.isHidden = !loading

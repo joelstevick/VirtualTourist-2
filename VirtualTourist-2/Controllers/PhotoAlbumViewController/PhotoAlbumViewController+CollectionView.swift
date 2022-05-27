@@ -24,14 +24,14 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
         
         let photoDownload = photoDownloads![indexPath.row]
         
-        cell.configure(image: photoDownload.image, loading: photoDownload.image == nil)
+        cell.configure(cgImage: photoDownload.croppedImage, loading: photoDownload.croppedImage == nil)
         
         return cell
     }
     
     // MARK: - flow layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: imageSideLen, height: imageSideLen)
+        return CGSize(width: Constants.sideLength, height: Constants.sideLength)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.zero

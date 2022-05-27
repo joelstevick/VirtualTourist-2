@@ -40,6 +40,8 @@
 		93D68F692840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F672840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift */; };
 		93D68F6A2840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */; };
 		93D68F6D2840FDD800B158B3 /* PhotoDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F6C2840FDD800B158B3 /* PhotoDownload.swift */; };
+		93D68F6F28410D7F00B158B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F6E28410D7F00B158B3 /* Constants.swift */; };
+		93D68F7128410DF300B158B3 /* CropImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F7028410DF300B158B3 /* CropImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		93D68F672840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
 		93D68F6C2840FDD800B158B3 /* PhotoDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDownload.swift; sourceTree = "<group>"; };
+		93D68F6E28410D7F00B158B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		93D68F7028410DF300B158B3 /* CropImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				93D68F262840353D00B158B3 /* Keys.swift */,
+				93D68F6E28410D7F00B158B3 /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			children = (
 				93D68F4328404A7700B158B3 /* ShowError.swift */,
 				93D68F4F2840CB7800B158B3 /* restore-map.swift */,
+				93D68F7028410DF300B158B3 /* CropImage.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -333,8 +339,10 @@
 				93D68F272840353D00B158B3 /* Keys.swift in Sources */,
 				93D68F602840D71700B158B3 /* PhotoAlbumViewController+Load.swift in Sources */,
 				93D68F4728404B7C00B158B3 /* AnnotationWithLocation.swift in Sources */,
+				93D68F6F28410D7F00B158B3 /* Constants.swift in Sources */,
 				93D68F41284049FC00B158B3 /* DataController.swift in Sources */,
 				93D68F622840DD2D00B158B3 /* Photos.swift in Sources */,
+				93D68F7128410DF300B158B3 /* CropImage.swift in Sources */,
 				93D68F6D2840FDD800B158B3 /* PhotoDownload.swift in Sources */,
 				93D68F5E2840D6C600B158B3 /* Search.swift in Sources */,
 				93D68F5C2840D6C600B158B3 /* GetInfoRespone.swift in Sources */,

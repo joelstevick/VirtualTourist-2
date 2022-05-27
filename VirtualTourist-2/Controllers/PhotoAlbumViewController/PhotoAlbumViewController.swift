@@ -14,7 +14,6 @@ class PhotoAlbumViewController: UIViewController {
     var location: Location!
     var dataController: DataController!
     var photoUrls = [String]()
-    let imageSideLen = 120
     
     var photoDownloads: [PhotoDownload]?
     
@@ -43,7 +42,7 @@ class PhotoAlbumViewController: UIViewController {
         
         // collectionView flow layout
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: imageSideLen, height: imageSideLen)
+        layout.itemSize = CGSize(width: Constants.sideLength, height: Constants.sideLength)
         collectionView.collectionViewLayout = layout
         
         activityIndicator.startAnimating()
