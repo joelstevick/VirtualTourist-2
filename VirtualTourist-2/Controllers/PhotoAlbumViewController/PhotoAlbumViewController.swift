@@ -23,7 +23,8 @@ class PhotoAlbumViewController: UIViewController {
         
         // display a pin for this location
         let annotation = MKPointAnnotation()
-        
+        annotation.title = location.title
+        annotation.subtitle = location.subtitle
         annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
         
         self.mapView.addAnnotation(annotation)
