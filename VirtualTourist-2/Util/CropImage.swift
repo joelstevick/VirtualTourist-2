@@ -12,7 +12,7 @@ func canonicalizeImage(_ image: UIImage) -> CGImage {
     // sideLength by sideLength square
     let sourceSize = image.size
     
-    // The shortest side
+    // select the shortest side
     let sideLength = min(
         image.size.width,
         image.size.height
