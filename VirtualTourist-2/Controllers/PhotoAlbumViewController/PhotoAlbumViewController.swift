@@ -14,6 +14,7 @@ class PhotoAlbumViewController: UIViewController {
     var location: Location!
     var dataController: DataController!
     var photoUrls = [String]()
+    let imageSideLen = 120
     
     var photoDownloads: [PhotoDownload]?
     
@@ -39,6 +40,11 @@ class PhotoAlbumViewController: UIViewController {
         annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
         
         self.mapView.addAnnotation(annotation)
+        
+        // collectionView flow layout
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: imageSideLen, height: imageSideLen)
+        collectionView.collectionViewLayout = layout
         
         activityIndicator.startAnimating()
         // download the images
