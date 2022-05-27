@@ -27,7 +27,12 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         
         // recover map center
-        restoreMap(mapView: mapView)
+        let defaults = UserDefaults.standard
+        if let latitude = defaults.object(forKey: Key.mapCenterLatitude.rawValue) as? Double,
+           let longitude = defaults.object(forKey: Key.mapCenterLongitude.rawValue) as? Double
+        {
+            restoreMap(mapView: mapView, centerCoordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+        }
         
         // init db
         dataController.load {
