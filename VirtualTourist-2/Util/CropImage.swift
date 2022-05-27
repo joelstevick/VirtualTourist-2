@@ -7,7 +7,7 @@
 
 import UIKit
 
-func cropImage(_ image: UIImage) -> CGImage {
+func canonicalizeImage(_ image: UIImage) -> CGImage {
     // Determines the x,y coordinate of a centered
     // sideLength by sideLength square
     let sourceSize = image.size
@@ -32,9 +32,9 @@ func cropImage(_ image: UIImage) -> CGImage {
 
     // Center crop the image
     let sourceCGImage = image.cgImage!
-    let croppedCGImage = sourceCGImage.cropping(
+    let canonicalImage = sourceCGImage.cropping(
         to: cropRect
     )!
     
-    return croppedCGImage
+    return canonicalImage
 }

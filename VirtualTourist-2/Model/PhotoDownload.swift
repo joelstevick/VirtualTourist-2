@@ -28,7 +28,7 @@ class PhotoDownload {
             image = await fetchImage(photoUrl: URL(string: self.url)!,
                                               viewController: self.viewController)
             
-            croppedImage = cropImage(image!)
+            croppedImage = canonicalizeImage(image!)
             
             // update the collection view
             DispatchQueue.main.async {
