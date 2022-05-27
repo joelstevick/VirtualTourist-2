@@ -11,16 +11,23 @@ func cropImage(_ image: UIImage) -> CGImage {
     // Determines the x,y coordinate of a centered
     // sideLength by sideLength square
     let sourceSize = image.size
-    let xOffset = (sourceSize.width - Constants.sideLength) / 2.0
-    let yOffset = (sourceSize.height - Constants.sideLength) / 2.0
+    
+    // The shortest side
+    let sideLength = min(
+        image.size.width,
+        image.size.height
+    )
+
+    let xOffset = (sourceSize.width - sideLength) / 2.0
+    let yOffset = (sourceSize.height - sideLength) / 2.0
 
     // The cropRect is the rect of the image to keep,
     // in this case centered
     let cropRect = CGRect(
         x: xOffset,
         y: yOffset,
-        width: Constants.sideLength,
-        height: Constants.sideLength
+        width: sideLength,
+        height: sideLength
     ).integral
 
     // Center crop the image
