@@ -26,6 +26,7 @@
 		93D68F4428404A7700B158B3 /* ShowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4328404A7700B158B3 /* ShowError.swift */; };
 		93D68F4728404B7C00B158B3 /* AnnotationWithLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4628404B7C00B158B3 /* AnnotationWithLocation.swift */; };
 		93D68F492840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F482840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift */; };
+		93D68F4C2840C5B000B158B3 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		93D68F4328404A7700B158B3 /* ShowError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowError.swift; sourceTree = "<group>"; };
 		93D68F4628404B7C00B158B3 /* AnnotationWithLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationWithLocation.swift; sourceTree = "<group>"; };
 		93D68F482840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapViewController+CoreData+Notifications.swift"; sourceTree = "<group>"; };
+		93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		93D68F202840300500B158B3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				93D68F4A2840C58500B158B3 /* PhotoAlbumViewController */,
 				93D68F21284031AA00B158B3 /* MapViewController */,
 			);
 			path = Controllers;
@@ -166,6 +169,14 @@
 				93D68F4628404B7C00B158B3 /* AnnotationWithLocation.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		93D68F4A2840C58500B158B3 /* PhotoAlbumViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */,
+			);
+			path = PhotoAlbumViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				93D68F272840353D00B158B3 /* Keys.swift in Sources */,
 				93D68F4728404B7C00B158B3 /* AnnotationWithLocation.swift in Sources */,
 				93D68F41284049FC00B158B3 /* DataController.swift in Sources */,
+				93D68F4C2840C5B000B158B3 /* PhotoAlbumViewController.swift in Sources */,
 				93D68F23284031C900B158B3 /* MapViewController+MapViewDelegate.swift in Sources */,
 				93D68F0A28402DAA00B158B3 /* AppDelegate.swift in Sources */,
 				93D68F0C28402DAA00B158B3 /* SceneDelegate.swift in Sources */,

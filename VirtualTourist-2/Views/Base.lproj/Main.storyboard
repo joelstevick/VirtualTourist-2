@@ -38,6 +38,21 @@
             </objects>
             <point key="canvasLocation" x="654" y="149"/>
         </scene>
+        <!--Photo Album View Controller-->
+        <scene sceneID="ADH-Tt-zuW">
+            <objects>
+                <viewController id="tav-Vy-an9" customClass="PhotoAlbumViewController" customModule="VirtualTourist_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ud-4C-u3n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Y5N-j7-BMe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZ9-ar-4Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1451" y="143"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZTo-qD-q4b">
             <objects>
