@@ -32,6 +32,7 @@
                     <navigationItem key="navigationItem" title="Virtual Tourist" id="Qw0-If-52q"/>
                     <connections>
                         <outlet property="mapView" destination="DHa-vi-jmO" id="JQM-3b-Riq"/>
+                        <segue destination="tav-Vy-an9" kind="show" identifier="PhotoAlbum" id="f0f-V7-JZU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -41,13 +42,14 @@
         <!--Photo Album View Controller-->
         <scene sceneID="ADH-Tt-zuW">
             <objects>
-                <viewController id="tav-Vy-an9" customClass="PhotoAlbumViewController" customModule="VirtualTourist_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoAlbumViewController" id="tav-Vy-an9" customClass="PhotoAlbumViewController" customModule="VirtualTourist_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ud-4C-u3n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Y5N-j7-BMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iif-WJ-si4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ9-ar-4Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

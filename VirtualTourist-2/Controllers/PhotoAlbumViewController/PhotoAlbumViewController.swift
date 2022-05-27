@@ -9,10 +9,12 @@ import UIKit
 
 class PhotoAlbumViewController: UIViewController {
 
+    // MARK - Properties
+    var location: Location!
+    var dataController: DataController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 

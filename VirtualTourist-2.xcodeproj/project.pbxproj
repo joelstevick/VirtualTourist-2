@@ -27,6 +27,7 @@
 		93D68F4728404B7C00B158B3 /* AnnotationWithLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4628404B7C00B158B3 /* AnnotationWithLocation.swift */; };
 		93D68F492840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F482840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift */; };
 		93D68F4C2840C5B000B158B3 /* PhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */; };
+		93D68F4E2840C6AE00B158B3 /* MapViewController+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F4D2840C6AE00B158B3 /* MapViewController+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		93D68F4628404B7C00B158B3 /* AnnotationWithLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationWithLocation.swift; sourceTree = "<group>"; };
 		93D68F482840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapViewController+CoreData+Notifications.swift"; sourceTree = "<group>"; };
 		93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumViewController.swift; sourceTree = "<group>"; };
+		93D68F4D2840C6AE00B158B3 /* MapViewController+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MapViewController+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				93D68F0D28402DAA00B158B3 /* MapViewController.swift */,
+				93D68F4D2840C6AE00B158B3 /* MapViewController+Utilities.swift */,
 				93D68F22284031C900B158B3 /* MapViewController+MapViewDelegate.swift */,
 				93D68F38284048FF00B158B3 /* MapViewController+Gestures.swift */,
 				93D68F3A2840495F00B158B3 /* MapViewController+ViewModel.swift */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D68F4E2840C6AE00B158B3 /* MapViewController+Utilities.swift in Sources */,
 				93D68F372840486600B158B3 /* Location+CoreDataProperties.swift in Sources */,
 				93D68F4428404A7700B158B3 /* ShowError.swift in Sources */,
 				93D68F362840486600B158B3 /* Location+CoreDataClass.swift in Sources */,
