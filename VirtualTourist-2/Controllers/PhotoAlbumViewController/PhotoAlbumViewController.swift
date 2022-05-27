@@ -48,7 +48,7 @@ class PhotoAlbumViewController: UIViewController {
             
             // instantiate downloads
             self.photoDownloads = photoUrls.map({ url in
-                return PhotoDownload(url: url, collectionView: self.collectionView)
+                return PhotoDownload(url: url, collectionView: self.collectionView, viewController: self)
             })
             
             DispatchQueue.main.async {
