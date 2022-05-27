@@ -19,14 +19,15 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lXE-Ab-K3B">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     </imageView>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ob9-cA-cR2">
-                        <rect key="frame" x="15" y="20" width="20" height="20"/>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ob9-cA-cR2">
+                        <rect key="frame" x="15" y="15" width="20" height="20"/>
                     </activityIndicatorView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="lXE-Ab-K3B" secondAttribute="bottom" id="5eX-FM-7UG"/>
+                <constraint firstItem="ob9-cA-cR2" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="BJa-CP-HBh"/>
                 <constraint firstItem="lXE-Ab-K3B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="KSS-ef-Nq0"/>
                 <constraint firstAttribute="trailing" secondItem="lXE-Ab-K3B" secondAttribute="trailing" id="SPY-Jz-KR2"/>
                 <constraint firstItem="ob9-cA-cR2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="kcD-ws-8x3"/>
