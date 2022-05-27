@@ -16,19 +16,19 @@ extension MapViewController {
         subTitle: String,
         location: Location
     ) {
-            let annotation = AnnotationWithLocation()
-            
+        let annotation = AnnotationWithLocation()
+        
         annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            annotation.title = title
-            annotation.subtitle = subTitle
-            annotation.location = location
-            
-            self.mapView.addAnnotation(annotation)
-            
-        }
+        annotation.title = title
+        annotation.subtitle = subTitle
+        annotation.location = location
+        
+        self.mapView.addAnnotation(annotation)
+        
+    }
     
     func load() {
-
+        
         // get the current locations
         let fetchRequest: NSFetchRequest<Location> = Location.fetchRequest()
         
@@ -36,7 +36,7 @@ extension MapViewController {
         fetchRequest.sortDescriptors = [
             NSSortDescriptor(key: "creationDate", ascending: false)
         ]
-    
+        
         guard let locations = try? dataController.viewContext.fetch(fetchRequest) else {
             showError(viewController: self, message: "Could not read your phone data")
             return
@@ -48,7 +48,7 @@ extension MapViewController {
                 title: location.title!,
                 subTitle: location.subtitle!,
                 location: location)
-        }        
+        }
     }
     
     func addAnnotation(
