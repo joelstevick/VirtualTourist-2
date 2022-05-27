@@ -39,6 +39,7 @@
 		93D68F642840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F632840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift */; };
 		93D68F692840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F672840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift */; };
 		93D68F6A2840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */; };
+		93D68F6D2840FDD800B158B3 /* PhotoDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F6C2840FDD800B158B3 /* PhotoDownload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		93D68F632840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoAlbumViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		93D68F672840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
+		93D68F6C2840FDD800B158B3 /* PhotoDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDownload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				93D68F40284049FC00B158B3 /* DataController.swift */,
+				93D68F6C2840FDD800B158B3 /* PhotoDownload.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				93D68F4728404B7C00B158B3 /* AnnotationWithLocation.swift in Sources */,
 				93D68F41284049FC00B158B3 /* DataController.swift in Sources */,
 				93D68F622840DD2D00B158B3 /* Photos.swift in Sources */,
+				93D68F6D2840FDD800B158B3 /* PhotoDownload.swift in Sources */,
 				93D68F5E2840D6C600B158B3 /* Search.swift in Sources */,
 				93D68F5C2840D6C600B158B3 /* GetInfoRespone.swift in Sources */,
 				93D68F4C2840C5B000B158B3 /* PhotoAlbumViewController.swift in Sources */,

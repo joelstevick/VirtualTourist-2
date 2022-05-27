@@ -15,6 +15,8 @@ class PhotoAlbumViewController: UIViewController {
     var dataController: DataController!
     var photoUrls = [String]()
     
+    var photoDownloads: [PhotoDownload]?
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -44,7 +46,10 @@ class PhotoAlbumViewController: UIViewController {
             // get the photo URLs
             photoUrls = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
             
-            print("photos", photoUrls.count)
+            // instantiate downloads
+            self.photoDownloads = photoUrls.map({ url in
+                return PhotoDownload(url: url, collectionView: self.collectionView)
+            })
             
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()

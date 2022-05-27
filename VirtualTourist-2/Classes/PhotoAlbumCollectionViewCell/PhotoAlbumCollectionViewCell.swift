@@ -19,7 +19,7 @@ class PhotoAlbumCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    public func configure(with image: UIImage?, loading: Bool) {
+    public func configure(image: UIImage?, loading: Bool) {
         imageView.image = image
         imageView.isHidden = loading
         
