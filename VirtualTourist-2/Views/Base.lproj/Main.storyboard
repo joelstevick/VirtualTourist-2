@@ -48,12 +48,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ycq-td-t9T">
-                                <rect key="frame" x="0.0" y="90" width="414" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="AWy-j9-DSY"/>
-                                </constraints>
-                            </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="evQ-NF-nAw">
                                 <rect key="frame" x="0.0" y="218" width="414" height="639"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,14 +68,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ycq-td-t9T">
+                                <rect key="frame" x="0.0" y="90" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AWy-j9-DSY"/>
+                                </constraints>
+                            </mapView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VNr-uY-38l">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5N-j7-BMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="VNr-uY-38l" firstAttribute="centerY" secondItem="1Ud-4C-u3n" secondAttribute="centerY" id="7Zu-7u-3gy"/>
                             <constraint firstItem="Ycq-td-t9T" firstAttribute="top" secondItem="Y5N-j7-BMe" secondAttribute="top" constant="-50" id="HNb-w1-t66"/>
                             <constraint firstItem="evQ-NF-nAw" firstAttribute="top" secondItem="Ycq-td-t9T" secondAttribute="bottom" id="OBC-vj-EM0"/>
                             <constraint firstItem="evQ-NF-nAw" firstAttribute="leading" secondItem="Y5N-j7-BMe" secondAttribute="leading" id="ODE-Dz-Q3O"/>
                             <constraint firstItem="Y5N-j7-BMe" firstAttribute="bottom" secondItem="evQ-NF-nAw" secondAttribute="bottom" constant="5" id="SCB-0Y-jxq"/>
+                            <constraint firstItem="VNr-uY-38l" firstAttribute="centerX" secondItem="1Ud-4C-u3n" secondAttribute="centerX" id="Zr7-pS-dfz"/>
                             <constraint firstItem="Ycq-td-t9T" firstAttribute="leading" secondItem="Y5N-j7-BMe" secondAttribute="leading" id="h3M-wx-Woy"/>
                             <constraint firstItem="Ycq-td-t9T" firstAttribute="trailing" secondItem="Y5N-j7-BMe" secondAttribute="trailing" id="nL1-V8-wBG"/>
                             <constraint firstItem="evQ-NF-nAw" firstAttribute="trailing" secondItem="Y5N-j7-BMe" secondAttribute="trailing" id="yFu-3r-AxS"/>
@@ -89,6 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iif-WJ-si4"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="VNr-uY-38l" id="gha-yj-z9V"/>
                         <outlet property="collectionView" destination="evQ-NF-nAw" id="3az-Iy-I8V"/>
                         <outlet property="mapView" destination="Ycq-td-t9T" id="Jze-fV-9MS"/>
                     </connections>

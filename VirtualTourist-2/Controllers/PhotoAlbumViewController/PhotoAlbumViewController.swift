@@ -16,6 +16,7 @@ class PhotoAlbumViewController: UIViewController {
     var photoUrls = [String]()
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -37,7 +38,7 @@ class PhotoAlbumViewController: UIViewController {
         
         self.mapView.addAnnotation(annotation)
         
-        
+        activityIndicator.startAnimating()
         // download the images
         Task {
             // get the photo URLs
@@ -45,6 +46,9 @@ class PhotoAlbumViewController: UIViewController {
             
             print("photos", photoUrls.count)
             
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
             collectionView.reloadData()
         }
 
