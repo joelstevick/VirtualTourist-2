@@ -31,6 +31,10 @@ class MapViewController: UIViewController {
             mapView.setCenter(CLLocationCoordinate2D(latitude: latitude, longitude: longitude), animated: true)
             mapView.zoomLevel = zoomLevel
         }
+        // init db
+        dataController.load {
+            // update to Main
+        }
         
         // Setup longpress for MapView
         let lpgr = UILongPressGestureRecognizer(target: self,
