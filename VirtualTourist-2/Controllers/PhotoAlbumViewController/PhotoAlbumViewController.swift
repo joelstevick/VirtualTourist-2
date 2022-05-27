@@ -28,7 +28,12 @@ class PhotoAlbumViewController: UIViewController {
         annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
         
         self.mapView.addAnnotation(annotation)
+        
+        // download the images
+        Task {
+            await loadFromCloud(completion: nil)
+        }
+
     }
     
-
 }
