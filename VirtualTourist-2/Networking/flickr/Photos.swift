@@ -1,15 +1,14 @@
 //
-//  Search.swift
-//  VirtualTourist
+//  Photos.swift
+//  VirtualTourist-2
 //
-//  Created by Joel Stevick on 5/18/22.
+//  Created by Joel Stevick on 5/27/22.
 //
 
-import Foundation
-import CoreLocation
 import UIKit
+import CoreLocation
 
-func photos(coordinate: CLLocationCoordinate2D, viewController: UIViewController) async -> [String] {
+func getPhotoUrls(coordinate: CLLocationCoordinate2D, viewController: UIViewController) async -> [String] {
     let session = URLSession.shared
     var photoUrls = [String]()
     

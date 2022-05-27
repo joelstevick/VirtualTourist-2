@@ -29,9 +29,13 @@ class PhotoAlbumViewController: UIViewController {
         
         self.mapView.addAnnotation(annotation)
         
+        
         // download the images
         Task {
-            await loadFromCloud(completion: nil)
+            // get the photo URLs
+            let photoUrls = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
+            
+            print("photos", photoUrls.count)
         }
 
     }

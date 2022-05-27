@@ -20,7 +20,7 @@ extension PhotoAlbumViewController {
     func loadFromCloud(completion: (() -> Void)?) async {
         
         // get the photo URLs
-        let photoUrls = await search(
+        let photoUrls = await photos(
             coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude), viewController: self)
         
         guard photoUrls.count > 0 else {
