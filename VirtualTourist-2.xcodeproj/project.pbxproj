@@ -36,6 +36,9 @@
 		93D68F5E2840D6C600B158B3 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F592840D6C600B158B3 /* Search.swift */; };
 		93D68F602840D71700B158B3 /* PhotoAlbumViewController+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F5F2840D71700B158B3 /* PhotoAlbumViewController+Load.swift */; };
 		93D68F622840DD2D00B158B3 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F612840DD2D00B158B3 /* Photos.swift */; };
+		93D68F642840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F632840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift */; };
+		93D68F692840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F672840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift */; };
+		93D68F6A2840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		93D68F592840D6C600B158B3 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		93D68F5F2840D71700B158B3 /* PhotoAlbumViewController+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoAlbumViewController+Load.swift"; sourceTree = "<group>"; };
 		93D68F612840DD2D00B158B3 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		93D68F632840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoAlbumViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		93D68F672840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				93D68F4628404B7C00B158B3 /* AnnotationWithLocation.swift */,
+				93D68F6B2840F56200B158B3 /* PhotoAlbumCollectionViewCell */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -197,6 +204,7 @@
 			children = (
 				93D68F4B2840C5B000B158B3 /* PhotoAlbumViewController.swift */,
 				93D68F5F2840D71700B158B3 /* PhotoAlbumViewController+Load.swift */,
+				93D68F632840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift */,
 			);
 			path = PhotoAlbumViewController;
 			sourceTree = "<group>";
@@ -220,6 +228,15 @@
 				93D68F612840DD2D00B158B3 /* Photos.swift */,
 			);
 			path = flickr;
+			sourceTree = "<group>";
+		};
+		93D68F6B2840F56200B158B3 /* PhotoAlbumCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				93D68F672840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift */,
+				93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */,
+			);
+			path = PhotoAlbumCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +307,7 @@
 			files = (
 				93D68F1928402DAB00B158B3 /* LaunchScreen.storyboard in Resources */,
 				93D68F1628402DAB00B158B3 /* Assets.xcassets in Resources */,
+				93D68F6A2840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib in Resources */,
 				93D68F1128402DAA00B158B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,10 +339,12 @@
 				93D68F5D2840D6C600B158B3 /* FetchImage.swift in Sources */,
 				93D68F0A28402DAA00B158B3 /* AppDelegate.swift in Sources */,
 				93D68F0C28402DAA00B158B3 /* SceneDelegate.swift in Sources */,
+				93D68F642840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift in Sources */,
 				93D68F39284048FF00B158B3 /* MapViewController+Gestures.swift in Sources */,
 				93D68F1428402DAA00B158B3 /* VirtualTourist_2.xcdatamodeld in Sources */,
 				93D68F502840CB7800B158B3 /* restore-map.swift in Sources */,
 				93D68F492840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift in Sources */,
+				93D68F692840F55500B158B3 /* PhotoAlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

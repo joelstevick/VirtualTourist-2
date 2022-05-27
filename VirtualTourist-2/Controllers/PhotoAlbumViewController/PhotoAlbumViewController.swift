@@ -13,11 +13,18 @@ class PhotoAlbumViewController: UIViewController {
     // MARK - Properties
     var location: Location!
     var dataController: DataController!
+    var photoUrls = [String]()
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(PhotoAlbumCollectionViewCell.nib(),
+                                forCellWithReuseIdentifier: PhotoAlbumCollectionViewCell.identifier)
         
         // restore the map center and zoom
         restoreMap(mapView: mapView, centerCoordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
@@ -34,9 +41,11 @@ class PhotoAlbumViewController: UIViewController {
         // download the images
         Task {
             // get the photo URLs
-            let photoUrls = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
+            photoUrls = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
             
             print("photos", photoUrls.count)
+            
+            collectionView.reloadData()
         }
 
     }
