@@ -45,6 +45,8 @@ class MapViewController: UIViewController {
         
         self.mapView.addGestureRecognizer(lpgr)
         
+        // initialize the view model
+        load()
             
     }
     
