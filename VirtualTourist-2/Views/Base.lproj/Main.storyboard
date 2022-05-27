@@ -46,14 +46,27 @@
                     <view key="view" contentMode="scaleToFill" id="1Ud-4C-u3n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ycq-td-t9T">
+                                <rect key="frame" x="0.0" y="90" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AWy-j9-DSY"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5N-j7-BMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ycq-td-t9T" firstAttribute="top" secondItem="Y5N-j7-BMe" secondAttribute="top" constant="-50" id="HNb-w1-t66"/>
+                            <constraint firstItem="Ycq-td-t9T" firstAttribute="leading" secondItem="Y5N-j7-BMe" secondAttribute="leading" id="h3M-wx-Woy"/>
+                            <constraint firstItem="Ycq-td-t9T" firstAttribute="trailing" secondItem="Y5N-j7-BMe" secondAttribute="trailing" id="nL1-V8-wBG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iif-WJ-si4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ9-ar-4Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1451" y="143"/>
+            <point key="canvasLocation" x="1450.7246376811595" y="142.63392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZTo-qD-q4b">
