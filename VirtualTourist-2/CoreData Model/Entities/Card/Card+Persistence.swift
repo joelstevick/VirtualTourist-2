@@ -86,6 +86,7 @@ extension Card {
         do {
             try context?.save()
         } catch {
+            // TODO: cleanup the saved image
             showError(viewController: viewController!, message: error.localizedDescription)
         }
     }
