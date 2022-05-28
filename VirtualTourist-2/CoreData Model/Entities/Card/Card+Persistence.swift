@@ -13,6 +13,7 @@ extension Card {
     
     func load(context: NSManagedObjectContext, viewController: UIViewController) {
         self.viewController = viewController
+        self.context = context
         
         if !loadFromDevice(context: context, viewController: viewController) {
             if image == nil {
@@ -79,6 +80,13 @@ extension Card {
     }
     
     func handleSaveNotification(notification: Notification) {
+        // first save to the device in case the db save fails
         saveImage(card: self, viewController: self.viewController!)
+        
+        do {
+            try context?.save()
+        } catch {
+            showError(viewController: viewController!, message: error.localizedDescription)
+        }
     }
 }
