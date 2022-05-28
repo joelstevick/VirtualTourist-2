@@ -12,6 +12,8 @@ import UIKit
 extension Card {
     
     func load(context: NSManagedObjectContext, viewController: UIViewController) {
+        self.viewController = viewController
+        
         if !loadFromDevice(context: context, viewController: viewController) {
             if image == nil {
                 photoDownload?.download()
@@ -77,6 +79,6 @@ extension Card {
     }
     
     func handleSaveNotification(notification: Notification) {
-        print("Saving card", id!)
+        saveImage(card: self, viewController: self.viewController!)
     }
 }

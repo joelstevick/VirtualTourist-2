@@ -46,6 +46,7 @@
 		93D68F7B284236E000B158B3 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F77284236E000B158B3 /* Card+CoreDataProperties.swift */; };
 		93D68F7E28423D9100B158B3 /* Card+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F7D28423D9100B158B3 /* Card+Persistence.swift */; };
 		93D68F8028424A8200B158B3 /* GetFileUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F7F28424A8200B158B3 /* GetFileUrl.swift */; };
+		93D68F822842693600B158B3 /* SaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F812842693600B158B3 /* SaveImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		93D68F77284236E000B158B3 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		93D68F7D28423D9100B158B3 /* Card+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+Persistence.swift"; sourceTree = "<group>"; };
 		93D68F7F28424A8200B158B3 /* GetFileUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFileUrl.swift; sourceTree = "<group>"; };
+		93D68F812842693600B158B3 /* SaveImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				93D68F4F2840CB7800B158B3 /* restore-map.swift */,
 				93D68F7028410DF300B158B3 /* CropImage.swift */,
 				93D68F7F28424A8200B158B3 /* GetFileUrl.swift */,
+				93D68F812842693600B158B3 /* SaveImage.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				93D68F272840353D00B158B3 /* Keys.swift in Sources */,
 				93D68F602840D71700B158B3 /* PhotoAlbumViewController+Load.swift in Sources */,
 				93D68F4728404B7C00B158B3 /* AnnotationWithLocation.swift in Sources */,
+				93D68F822842693600B158B3 /* SaveImage.swift in Sources */,
 				93D68F6F28410D7F00B158B3 /* Constants.swift in Sources */,
 				93D68F41284049FC00B158B3 /* DataController.swift in Sources */,
 				93D68F622840DD2D00B158B3 /* Photos.swift in Sources */,
