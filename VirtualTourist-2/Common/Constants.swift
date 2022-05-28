@@ -12,4 +12,5 @@ struct Constants {
     public static let cardImages = "card-images"
     public static let cardPrefix = "card"
     public static let cardChanged = "card-changed"
+    public static let save = "save"
 }

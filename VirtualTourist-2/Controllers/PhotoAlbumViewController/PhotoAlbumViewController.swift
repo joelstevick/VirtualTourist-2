@@ -24,6 +24,10 @@ class PhotoAlbumViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - Actions
+    @IBAction func savePressed(_ sender: UIBarButtonItem) {
+        publishSaveEvent()
+    }
     // MARK: - Lifecyle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +59,7 @@ class PhotoAlbumViewController: UIViewController {
         
         // listen for change events: enable save button
         changeEventObserverToken = NotificationCenter.default.addObserver(forName: Notification.Name(Constants.cardChanged),                                                                         object: nil, queue: nil, using: handleChangeNotification)
+        
         // download the images
         Task {
             // get the photo URLs
@@ -101,4 +106,7 @@ class PhotoAlbumViewController: UIViewController {
         saveBtn.isEnabled = true
     }
     
+    private func publishSaveEvent() {
+        NotificationCenter.default.post(name: Notification.Name(Constants.save), object: nil)
+    }
 }

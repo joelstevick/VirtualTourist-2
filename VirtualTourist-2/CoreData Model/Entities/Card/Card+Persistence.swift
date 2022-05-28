@@ -19,6 +19,12 @@ extension Card {
                 publishChangeEvent()
             }
         }
+        
+        // listen for save notifications
+        removeSaveNotificationObserver()
+        saveNotificationObserverToken = NotificationCenter.default.addObserver(
+            forName: Notification.Name(Constants.save),                                                             object: nil, queue: nil, using: handleSaveNotification)
+        
     }
     
     func loadFromDevice(context: NSManagedObjectContext, viewController: UIViewController) -> Bool {
@@ -58,8 +64,19 @@ extension Card {
             return photoDownload?.croppedImage
         }
     }
-    
+    // MARK: - Notifications
+    func removeSaveNotificationObserver() {
+        if let token = saveNotificationObserverToken {
+            NotificationCenter.default.removeObserver(token)
+            
+            saveNotificationObserverToken = nil
+        }
+    }
     private func publishChangeEvent() {
         NotificationCenter.default.post(name: Notification.Name(Constants.cardChanged), object: nil)
+    }
+    
+    func handleSaveNotification(notification: Notification) {
+        print("Saving card", id!)
     }
 }

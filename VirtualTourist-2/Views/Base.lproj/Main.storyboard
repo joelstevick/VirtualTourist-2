@@ -101,7 +101,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iif-WJ-si4">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="WOv-m8-qv6" userLabel="Save Btn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="WOv-m8-qv6" userLabel="Save Btn">
+                            <connections>
+                                <action selector="savePressed:" destination="tav-Vy-an9" id="Gk7-9i-bNI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="VNr-uY-38l" id="gha-yj-z9V"/>

@@ -15,7 +15,10 @@ public class Card: NSManagedObject {
 
     //MARK: - custom properties
     var photoDownload: PhotoDownload?
-    
+    var saveNotificationObserverToken: Any?
     var image: CGImage?
     
+    deinit {
+        removeSaveNotificationObserver()
+    }
 }
