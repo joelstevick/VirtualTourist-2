@@ -20,6 +20,7 @@ public class Card: NSManagedObject {
     var viewController: UIViewController?
     var context: NSManagedObjectContext?
     var changed = false
+    var delete = false
     
     deinit {
         removeSaveNotificationObserver()

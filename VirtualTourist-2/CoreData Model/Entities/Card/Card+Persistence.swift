@@ -81,4 +81,10 @@ extension Card {
             showError(viewController: viewController!, message: error.localizedDescription)
         }
     }
+    
+    func markForDelete() {
+        delete = true
+        
+        publishChangeEvent()
+    }
 }

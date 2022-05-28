@@ -11,6 +11,8 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
     
     // MARK: - delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // get the model
+        let card = cards![indexPath.row];
         
         // remove from the view
         collectionView.deselectItem(at: indexPath, animated: true)
@@ -19,6 +21,7 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
         collectionView.deleteItems(at: [indexPath])
         
         // remove from the model
+        card.markForDelete();
     }
     
     // MARK: - data source
