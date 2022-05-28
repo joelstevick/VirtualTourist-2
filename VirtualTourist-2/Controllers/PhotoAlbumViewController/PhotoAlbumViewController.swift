@@ -16,15 +16,18 @@ class PhotoAlbumViewController: UIViewController {
     var photoInfo = [PhotoInfo]()
     var cards: [Card]?
     
+    // MARK: - Outlets
     @IBOutlet weak var noPicsLabel: UILabel!
-    
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - Lifecyle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        saveBtn.isEnabled = false
         noPicsLabel.isHidden = true
         collectionView.delegate = self
         collectionView.dataSource = self

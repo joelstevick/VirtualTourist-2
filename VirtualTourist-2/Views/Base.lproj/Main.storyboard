@@ -108,6 +108,7 @@
                         <outlet property="collectionView" destination="evQ-NF-nAw" id="3az-Iy-I8V"/>
                         <outlet property="mapView" destination="Ycq-td-t9T" id="Jze-fV-9MS"/>
                         <outlet property="noPicsLabel" destination="91d-8C-kqu" id="Ro3-tO-E7w"/>
+                        <outlet property="saveBtn" destination="WOv-m8-qv6" id="Ff2-8T-XBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ9-ar-4Sm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
