@@ -20,7 +20,20 @@ extension Card {
     }
     
     func loadFromDevice(context: NSManagedObjectContext, viewController: UIViewController) -> Bool {
-        return false
+    
+        let fetchRequest: NSFetchRequest<Location> = Location.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate(
+            format: "id == %@", id!
+        )
+        
+        do {
+            let cards = try context.fetch(fetchRequest)
+            
+            return (cards.first != nil)
+        } catch {
+            fatalError("The fetch could not be performed: \(error.localizedDescription)")
+        }
     }
     
     func getImage() -> CGImage? {

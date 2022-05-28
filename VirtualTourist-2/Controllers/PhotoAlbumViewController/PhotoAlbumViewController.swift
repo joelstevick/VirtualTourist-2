@@ -60,6 +60,8 @@ class PhotoAlbumViewController: UIViewController {
                 let card = Card(context: dataController.viewContext)
                 card.photoDownload = PhotoDownload(url: info.url, collectionView: self.collectionView, viewController: self, id: info.id)
                 
+                card.id = info.id
+                
                 card.load(context: dataController.viewContext, viewController: self)
                 
                 return card
