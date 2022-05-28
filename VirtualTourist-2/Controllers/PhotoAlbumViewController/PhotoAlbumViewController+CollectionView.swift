@@ -24,7 +24,7 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
         
         let card = cards![indexPath.row]
         
-        cell.configure(cgImage: card.photoDownload?.croppedImage, loading: card.photoDownload?.croppedImage == nil)
+        cell.configure(cgImage: card.getImage(), loading: card.getImage() == nil)
         
         return cell
     }

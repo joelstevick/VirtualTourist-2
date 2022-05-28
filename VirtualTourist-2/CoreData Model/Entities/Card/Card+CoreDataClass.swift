@@ -8,10 +8,14 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 @objc(Card)
 public class Card: NSManagedObject {
 
     //MARK: - custom properties
     var photoDownload: PhotoDownload?
+    
+    var image: CGImage?
+    
 }

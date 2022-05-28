@@ -57,6 +57,8 @@ class PhotoAlbumViewController: UIViewController {
             self.cards = photoUrls.map({ url in
                 let card = Card(context: dataController.viewContext)
                 card.photoDownload = PhotoDownload(url: url, collectionView: self.collectionView, viewController: self)
+                card.load()
+                
                 return card
             })
             

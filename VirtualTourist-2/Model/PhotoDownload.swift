@@ -18,8 +18,7 @@ class PhotoDownload {
         self.url = url
         self.collectionView = collectionView
         self.viewController = viewController
-        
-        download()
+      
     }
     
     func download() {
