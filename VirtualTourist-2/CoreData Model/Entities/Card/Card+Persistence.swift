@@ -81,6 +81,12 @@ extension Card {
     func deleteFromDevice() {
         
         context?.delete(self)
+        
+        do {
+            try context?.save()
+        } catch {
+            showError(viewController: viewController!, message: error.localizedDescription)
+        }
     }
     
     func save() {
