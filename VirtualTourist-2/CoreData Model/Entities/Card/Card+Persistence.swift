@@ -70,18 +70,30 @@ extension Card {
             return
         }
         changed = false
+        
+        if delete {
+            deleteFromDevice()
+        } else {
+            save()
+        }
+    }
+    
+    func deleteFromDevice() {
+        
+        context?.delete(self)
+    }
+    
+    func save() {
         // first save to the device in case the db save fails
         saveImage(card: self, viewController: self.viewController!)
         
         do {
-            print("id", id)
             try context?.save()
         } catch {
             // TODO: cleanup the saved image
             showError(viewController: viewController!, message: error.localizedDescription)
         }
     }
-    
     func markForDelete() {
         delete = true
         
