@@ -83,6 +83,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHA-GT-4qk">
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NLw-IC-eQq"/>
+                                    <barButtonItem title="New Collection" id="uY1-3b-7tE"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="99x-0Q-8QC"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5N-j7-BMe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
