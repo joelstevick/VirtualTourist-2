@@ -14,7 +14,7 @@ class PhotoAlbumViewController: UIViewController {
     var location: Location!
     var dataController: DataController!
     var photoUrls = [String]()
-    var cards: [PhotoDownload]?
+    var cards: [Card]?
     
     @IBOutlet weak var noPicsLabel: UILabel!
     
@@ -55,7 +55,9 @@ class PhotoAlbumViewController: UIViewController {
             
             // instantiate downloads
             self.cards = photoUrls.map({ url in
-                return PhotoDownload(url: url, collectionView: self.collectionView, viewController: self)
+                let card = Card(context: dataController.viewContext)
+                card.photoDownload = PhotoDownload(url: url, collectionView: self.collectionView, viewController: self)
+                return card
             })
             
             DispatchQueue.main.async {

@@ -16,6 +16,7 @@ extension Card {
         return NSFetchRequest<Card>(entityName: "Card")
     }
 
+    // MARK: - NSManaged properties
     @NSManaged public var id: String?
     @NSManaged public var location: Location?
 
@@ -24,3 +25,4 @@ extension Card {
 extension Card : Identifiable {
 
 }
+

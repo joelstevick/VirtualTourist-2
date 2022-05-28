@@ -22,9 +22,9 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoAlbumCollectionViewCell.identifier, for: indexPath) as! PhotoAlbumCollectionViewCell
         
-        let photoDownload = cards![indexPath.row]
+        let card = cards![indexPath.row]
         
-        cell.configure(cgImage: photoDownload.croppedImage, loading: photoDownload.croppedImage == nil)
+        cell.configure(cgImage: card.photoDownload?.croppedImage, loading: card.photoDownload?.croppedImage == nil)
         
         return cell
     }
