@@ -21,10 +21,13 @@ class PhotoAlbumViewController: UIViewController {
     @IBOutlet weak var noPicsLabel: UILabel!
     @IBOutlet weak var saveBtn: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var newCollectionBtn: UIBarButtonItem!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Actions
+    @IBAction func newCollectionBtnPressed(_ sender: Any) {
+    }
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
         publishSaveEvent()
     }
@@ -32,6 +35,7 @@ class PhotoAlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        newCollectionBtn.isEnabled = false
         saveBtn.isEnabled = false
         noPicsLabel.isHidden = true
         collectionView.delegate = self
@@ -75,6 +79,7 @@ class PhotoAlbumViewController: UIViewController {
                     
                 }
 
+                newCollectionBtn.isEnabled = true
                 collectionView.reloadData()
                 activityIndicator.stopAnimating()
             } else {
@@ -99,6 +104,7 @@ class PhotoAlbumViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
                     self.collectionView.reloadData()
+                    self.newCollectionBtn.isEnabled = true
                     if self.cards.count == 0 {
                         self.noPicsLabel.isHidden = false
                     }

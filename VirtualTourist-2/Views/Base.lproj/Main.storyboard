@@ -88,7 +88,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="NLw-IC-eQq"/>
-                                    <barButtonItem title="New Collection" id="uY1-3b-7tE"/>
+                                    <barButtonItem title="New Collection" id="uY1-3b-7tE">
+                                        <connections>
+                                            <action selector="newCollectionBtnPressed:" destination="tav-Vy-an9" id="EFU-fk-tYB"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="99x-0Q-8QC"/>
                                 </items>
                             </toolbar>
@@ -120,6 +124,7 @@
                         <outlet property="activityIndicator" destination="VNr-uY-38l" id="gha-yj-z9V"/>
                         <outlet property="collectionView" destination="evQ-NF-nAw" id="3az-Iy-I8V"/>
                         <outlet property="mapView" destination="Ycq-td-t9T" id="Jze-fV-9MS"/>
+                        <outlet property="newCollectionBtn" destination="uY1-3b-7tE" id="5Dx-aB-PR3"/>
                         <outlet property="noPicsLabel" destination="91d-8C-kqu" id="Ro3-tO-E7w"/>
                         <outlet property="saveBtn" destination="WOv-m8-qv6" id="Ff2-8T-XBn"/>
                     </connections>
