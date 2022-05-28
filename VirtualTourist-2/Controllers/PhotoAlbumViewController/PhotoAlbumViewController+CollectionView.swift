@@ -16,13 +16,13 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
     
     // MARK: - data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoDownloads?.count ?? 0
+        return cards?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoAlbumCollectionViewCell.identifier, for: indexPath) as! PhotoAlbumCollectionViewCell
         
-        let photoDownload = photoDownloads![indexPath.row]
+        let photoDownload = cards![indexPath.row]
         
         cell.configure(cgImage: photoDownload.croppedImage, loading: photoDownload.croppedImage == nil)
         

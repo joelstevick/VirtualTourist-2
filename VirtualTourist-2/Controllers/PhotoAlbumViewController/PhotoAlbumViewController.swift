@@ -14,7 +14,7 @@ class PhotoAlbumViewController: UIViewController {
     var location: Location!
     var dataController: DataController!
     var photoUrls = [String]()
-    var photoDownloads: [PhotoDownload]?
+    var cards: [PhotoDownload]?
     
     @IBOutlet weak var noPicsLabel: UILabel!
     
@@ -54,14 +54,14 @@ class PhotoAlbumViewController: UIViewController {
             photoUrls = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
             
             // instantiate downloads
-            self.photoDownloads = photoUrls.map({ url in
+            self.cards = photoUrls.map({ url in
                 return PhotoDownload(url: url, collectionView: self.collectionView, viewController: self)
             })
             
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 
-                if self.photoDownloads?.count == 0 {
+                if self.cards?.count == 0 {
                     self.noPicsLabel.isHidden = false
                 }
             }
