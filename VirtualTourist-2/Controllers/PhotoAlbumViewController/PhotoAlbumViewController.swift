@@ -68,6 +68,11 @@ class PhotoAlbumViewController: UIViewController {
                 
                 for _card in location.cards! {
                     cards.append(_card as! Card)
+                    
+                    let card: Card = _card as! Card
+                    
+                    card.load(context: dataController.viewContext, viewController: self)
+                    
                 }
 
                 collectionView.reloadData()
