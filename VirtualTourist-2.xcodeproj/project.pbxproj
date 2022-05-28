@@ -45,6 +45,7 @@
 		93D68F7A284236E000B158B3 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F76284236E000B158B3 /* Card+CoreDataClass.swift */; };
 		93D68F7B284236E000B158B3 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F77284236E000B158B3 /* Card+CoreDataProperties.swift */; };
 		93D68F7E28423D9100B158B3 /* Card+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F7D28423D9100B158B3 /* Card+Persistence.swift */; };
+		93D68F8028424A8200B158B3 /* GetFileUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F7F28424A8200B158B3 /* GetFileUrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		93D68F76284236E000B158B3 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
 		93D68F77284236E000B158B3 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		93D68F7D28423D9100B158B3 /* Card+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+Persistence.swift"; sourceTree = "<group>"; };
+		93D68F7F28424A8200B158B3 /* GetFileUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFileUrl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				93D68F4328404A7700B158B3 /* ShowError.swift */,
 				93D68F4F2840CB7800B158B3 /* restore-map.swift */,
 				93D68F7028410DF300B158B3 /* CropImage.swift */,
+				93D68F7F28424A8200B158B3 /* GetFileUrl.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				93D68F4428404A7700B158B3 /* ShowError.swift in Sources */,
 				93D68F362840486600B158B3 /* Location+CoreDataClass.swift in Sources */,
 				93D68F0E28402DAA00B158B3 /* MapViewController.swift in Sources */,
+				93D68F8028424A8200B158B3 /* GetFileUrl.swift in Sources */,
 				93D68F3B2840495F00B158B3 /* MapViewController+ViewModel.swift in Sources */,
 				93D68F272840353D00B158B3 /* Keys.swift in Sources */,
 				93D68F602840D71700B158B3 /* PhotoAlbumViewController+Load.swift in Sources */,

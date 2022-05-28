@@ -9,4 +9,6 @@ import Foundation
 
 struct Constants {
     public static let sideLength = 100.0
+    public static let cardImages = "card-images"
+    public static let cardPrefix = "card"
 }

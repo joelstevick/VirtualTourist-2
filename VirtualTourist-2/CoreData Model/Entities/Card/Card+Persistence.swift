@@ -30,7 +30,20 @@ extension Card {
         do {
             let cards = try context.fetch(fetchRequest)
             
-            return (cards.first != nil)
+            guard cards.first != nil else {
+                return false
+            }
+            
+            // load the image from the device
+            let fileURL = getFileUrl(cardId: id!, viewController: viewController)!
+            if let photoImage = UIImage(contentsOfFile: fileURL.path) {
+                
+                image = photoImage.cgImage
+                return true
+                
+            } else {
+                return false
+            }
         } catch {
             fatalError("The fetch could not be performed: \(error.localizedDescription)")
         }
