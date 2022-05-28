@@ -9,8 +9,7 @@ import UIKit
 
 extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    // MARK: - delegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func removeCard(indexPath: IndexPath) {
         // get the model
         let card = cards[indexPath.row];
         
@@ -22,6 +21,10 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
         
         // remove from the model
         card.markForDelete();
+    }
+    // MARK: - delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       removeCard(indexPath: indexPath)
     }
     
     // MARK: - data source

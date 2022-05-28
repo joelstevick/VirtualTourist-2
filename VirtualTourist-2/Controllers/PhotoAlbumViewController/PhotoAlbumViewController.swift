@@ -27,6 +27,9 @@ class PhotoAlbumViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func newCollectionBtnPressed(_ sender: Any) {
+        while cards.count > 0 {
+            removeCard(indexPath: IndexPath(row: 0, section: 0))
+        }
     }
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
         publishSaveEvent()
