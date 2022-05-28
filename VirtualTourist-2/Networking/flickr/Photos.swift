@@ -8,9 +8,13 @@
 import UIKit
 import CoreLocation
 
-func getPhotoUrls(coordinate: CLLocationCoordinate2D, viewController: UIViewController) async -> [String] {
+struct PhotoInfo {
+    let id: String
+    let url: String
+}
+func getPhotoUrls(coordinate: CLLocationCoordinate2D, viewController: UIViewController) async -> [PhotoInfo] {
     let session = URLSession.shared
-    var photoUrls = [String]()
+    var photoUrls = [PhotoInfo]()
     
     var request = URLRequest(url: URL(string: FlickrConfig.makeSearchUrl(coordinate: coordinate))!)
     request.httpMethod = "GET"
@@ -25,7 +29,7 @@ func getPhotoUrls(coordinate: CLLocationCoordinate2D, viewController: UIViewCont
         
         for photo in response.photos.photo {
             
-            photoUrls.append(FlickrConfig.makePhotoUrl(photo))
+            photoUrls.append(PhotoInfo(id: photo.id, url: FlickrConfig.makePhotoUrl(photo)) )
         }
         
         return photoUrls

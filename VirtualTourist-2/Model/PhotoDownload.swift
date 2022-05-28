@@ -8,13 +8,15 @@
 import UIKit
 
 class PhotoDownload {
+    let id: String
     let url: String
     let collectionView: UICollectionView
     let viewController: UIViewController
     var image: UIImage?
     var croppedImage: CGImage?
     
-    init(url: String, collectionView: UICollectionView, viewController: UIViewController) {
+    init(url: String, collectionView: UICollectionView, viewController: UIViewController, id: String) {
+        self.id = id
         self.url = url
         self.collectionView = collectionView
         self.viewController = viewController

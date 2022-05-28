@@ -13,7 +13,7 @@ class PhotoAlbumViewController: UIViewController {
     // MARK - Properties
     var location: Location!
     var dataController: DataController!
-    var photoUrls = [String]()
+    var photoInfo = [PhotoInfo]()
     var cards: [Card]?
     
     @IBOutlet weak var noPicsLabel: UILabel!
@@ -51,12 +51,12 @@ class PhotoAlbumViewController: UIViewController {
         // download the images
         Task {
             // get the photo URLs
-            photoUrls = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
+            photoInfo = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
             
             // instantiate downloads
-            self.cards = photoUrls.map({ url in
+            self.cards = photoInfo.map({ info in
                 let card = Card(context: dataController.viewContext)
-                card.photoDownload = PhotoDownload(url: url, collectionView: self.collectionView, viewController: self)
+                card.photoDownload = PhotoDownload(url: info.url, collectionView: self.collectionView, viewController: self, id: info.id)
                 card.load()
                 
                 return card
