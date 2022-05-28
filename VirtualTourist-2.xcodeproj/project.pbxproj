@@ -42,6 +42,8 @@
 		93D68F6D2840FDD800B158B3 /* PhotoDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F6C2840FDD800B158B3 /* PhotoDownload.swift */; };
 		93D68F6F28410D7F00B158B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F6E28410D7F00B158B3 /* Constants.swift */; };
 		93D68F7128410DF300B158B3 /* CropImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F7028410DF300B158B3 /* CropImage.swift */; };
+		93D68F7A284236E000B158B3 /* Card+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F76284236E000B158B3 /* Card+CoreDataClass.swift */; };
+		93D68F7B284236E000B158B3 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F77284236E000B158B3 /* Card+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		93D68F6C2840FDD800B158B3 /* PhotoDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDownload.swift; sourceTree = "<group>"; };
 		93D68F6E28410D7F00B158B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		93D68F7028410DF300B158B3 /* CropImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImage.swift; sourceTree = "<group>"; };
+		93D68F76284236E000B158B3 /* Card+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataClass.swift"; sourceTree = "<group>"; };
+		93D68F77284236E000B158B3 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,7 @@
 		93D68F72284235B500B158B3 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				93D68F7C2842372A00B158B3 /* Card */,
 				93D68F73284235C600B158B3 /* Location */,
 			);
 			path = Entities;
@@ -262,6 +267,15 @@
 				93D68F352840486600B158B3 /* Location+CoreDataProperties.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		93D68F7C2842372A00B158B3 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				93D68F76284236E000B158B3 /* Card+CoreDataClass.swift */,
+				93D68F77284236E000B158B3 /* Card+CoreDataProperties.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +375,7 @@
 				93D68F7128410DF300B158B3 /* CropImage.swift in Sources */,
 				93D68F6D2840FDD800B158B3 /* PhotoDownload.swift in Sources */,
 				93D68F5E2840D6C600B158B3 /* Search.swift in Sources */,
+				93D68F7A284236E000B158B3 /* Card+CoreDataClass.swift in Sources */,
 				93D68F5C2840D6C600B158B3 /* GetInfoRespone.swift in Sources */,
 				93D68F4C2840C5B000B158B3 /* PhotoAlbumViewController.swift in Sources */,
 				93D68F23284031C900B158B3 /* MapViewController+MapViewDelegate.swift in Sources */,
@@ -369,6 +384,7 @@
 				93D68F0C28402DAA00B158B3 /* SceneDelegate.swift in Sources */,
 				93D68F642840E07E00B158B3 /* PhotoAlbumViewController+CollectionView.swift in Sources */,
 				93D68F39284048FF00B158B3 /* MapViewController+Gestures.swift in Sources */,
+				93D68F7B284236E000B158B3 /* Card+CoreDataProperties.swift in Sources */,
 				93D68F1428402DAA00B158B3 /* VirtualTourist_2.xcdatamodeld in Sources */,
 				93D68F502840CB7800B158B3 /* restore-map.swift in Sources */,
 				93D68F492840C4BA00B158B3 /* MapViewController+CoreData+Notifications.swift in Sources */,
