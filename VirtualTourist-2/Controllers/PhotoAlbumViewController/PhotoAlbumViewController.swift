@@ -53,8 +53,10 @@ class PhotoAlbumViewController: UIViewController {
             // get the photo URLs
             photoInfo = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
             
-            // instantiate downloads
+            // load the cards
             self.cards = photoInfo.map({ info in
+                
+                // initialize a card.  Inject the photo downloader, in case it is needed
                 let card = Card(context: dataController.viewContext)
                 card.photoDownload = PhotoDownload(url: info.url, collectionView: self.collectionView, viewController: self, id: info.id)
                 
