@@ -125,6 +125,8 @@ class PhotoAlbumViewController: UIViewController {
     
     // MARK: - download a new batch
     func download() async {
+        self.cards.removeAll()
+        
         // get the photo URLs
         photoInfo = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
         
