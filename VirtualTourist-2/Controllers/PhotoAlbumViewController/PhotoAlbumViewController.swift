@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 class PhotoAlbumViewController: UIViewController {
-
+    
     // MARK - Properties
     var location: Location!
     var dataController: DataController!
@@ -62,28 +62,32 @@ class PhotoAlbumViewController: UIViewController {
         
         // download the images
         Task {
-            // get the photo URLs
-            photoInfo = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
-            
-            // load the cards
-            self.cards = photoInfo.map({ info in
+            // do we already have cards?
+            if location.cards?.count == 0 {
+    
+                // get the photo URLs
+                photoInfo = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
                 
-                // initialize a card.  Inject the photo downloader, in case it is needed
-                let card = Card(context: dataController.viewContext)
-                card.photoDownload = PhotoDownload(url: info.url, collectionView: self.collectionView, viewController: self, id: info.id)
+                // load the cards
+                self.cards = photoInfo.map({ info in
+                    
+                    // initialize a card.  Inject the photo downloader, in case it is needed
+                    let card = Card(context: dataController.viewContext)
+                    card.photoDownload = PhotoDownload(url: info.url, collectionView: self.collectionView, viewController: self, id: info.id)
+                    
+                    card.id = String(info.id)
+                    
+                    card.load(context: dataController.viewContext, viewController: self)
+                    
+                    return card
+                })
                 
-                card.id = String(info.id)
-                
-                card.load(context: dataController.viewContext, viewController: self)
-                
-                return card
-            })
-            
-            DispatchQueue.main.async {
-                self.activityIndicator.stopAnimating()
-                
-                if self.cards?.count == 0 {
-                    self.noPicsLabel.isHidden = false
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    
+                    if self.cards?.count == 0 {
+                        self.noPicsLabel.isHidden = false
+                    }
                 }
             }
             collectionView.reloadData()
