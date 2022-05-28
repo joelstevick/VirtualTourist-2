@@ -12,12 +12,12 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
     // MARK: - delegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // get the model
-        let card = cards![indexPath.row];
+        let card = cards[indexPath.row];
         
         // remove from the view
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        cards?.remove(at: indexPath.row)
+        cards.remove(at: indexPath.row)
         collectionView.deleteItems(at: [indexPath])
         
         // remove from the model
@@ -26,13 +26,14 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
     
     // MARK: - data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cards?.count ?? 0
+        print(cards.count)
+        return cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoAlbumCollectionViewCell.identifier, for: indexPath) as! PhotoAlbumCollectionViewCell
         
-        let card = cards![indexPath.row]
+        let card = cards[indexPath.row]
         
         cell.configure(cgImage: card.getImage(), loading: card.getImage() == nil)
         

@@ -14,7 +14,7 @@ class PhotoAlbumViewController: UIViewController {
     var location: Location!
     var dataController: DataController!
     var photoInfo = [PhotoInfo]()
-    var cards: [Card]?
+    var cards = [Card]()
     var changeEventObserverToken: Any?
     
     // MARK: - Outlets
@@ -63,8 +63,16 @@ class PhotoAlbumViewController: UIViewController {
         // download the images
         Task {
             // do we already have cards?
-            if location.cards?.count == 0 {
-    
+            if location.cards?.count != 0 {
+                cards.removeAll()
+                
+                for _card in location.cards! {
+                    cards.append(_card as! Card)
+                }
+
+                collectionView.reloadData()
+                activityIndicator.stopAnimating()
+            } else {
                 // get the photo URLs
                 photoInfo = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
                 
@@ -76,6 +84,7 @@ class PhotoAlbumViewController: UIViewController {
                     card.photoDownload = PhotoDownload(url: info.url, collectionView: self.collectionView, viewController: self, id: info.id)
                     
                     card.id = String(info.id)
+                    card.location = location
                     
                     card.load(context: dataController.viewContext, viewController: self)
                     
@@ -84,13 +93,12 @@ class PhotoAlbumViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
-                    
-                    if self.cards?.count == 0 {
+                    self.collectionView.reloadData()
+                    if self.cards.count == 0 {
                         self.noPicsLabel.isHidden = false
                     }
                 }
             }
-            collectionView.reloadData()
         }
     }
     deinit {
