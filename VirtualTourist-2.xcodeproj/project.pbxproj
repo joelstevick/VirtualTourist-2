@@ -155,8 +155,7 @@
 		93D68F242840348A00B158B3 /* CoreData Model */ = {
 			isa = PBXGroup;
 			children = (
-				93D68F342840486600B158B3 /* Location+CoreDataClass.swift */,
-				93D68F352840486600B158B3 /* Location+CoreDataProperties.swift */,
+				93D68F72284235B500B158B3 /* Entities */,
 				93D68F1228402DAA00B158B3 /* VirtualTourist_2.xcdatamodeld */,
 			);
 			path = "CoreData Model";
@@ -246,6 +245,23 @@
 				93D68F682840F55500B158B3 /* PhotoAlbumCollectionViewCell.xib */,
 			);
 			path = PhotoAlbumCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		93D68F72284235B500B158B3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				93D68F73284235C600B158B3 /* Location */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		93D68F73284235C600B158B3 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				93D68F342840486600B158B3 /* Location+CoreDataClass.swift */,
+				93D68F352840486600B158B3 /* Location+CoreDataProperties.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
