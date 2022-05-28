@@ -31,32 +31,16 @@ extension Card {
     }
     
     func loadFromDevice(context: NSManagedObjectContext, viewController: UIViewController) -> Bool {
-    
-        let fetchRequest: NSFetchRequest<Location> = Location.fetchRequest()
         
-        fetchRequest.predicate = NSPredicate(
-            format: "id == %@", id!
-        )
-        
-        do {
-            let cards = try context.fetch(fetchRequest)
+        // load the image from the device
+        let fileURL = getFileUrl(cardId: id, viewController: viewController)!
+        if let photoImage = UIImage(contentsOfFile: fileURL.path) {
             
-            guard cards.first != nil else {
-                return false
-            }
+            image = photoImage.cgImage
+            return true
             
-            // load the image from the device
-            let fileURL = getFileUrl(cardId: id!, viewController: viewController)!
-            if let photoImage = UIImage(contentsOfFile: fileURL.path) {
-                
-                image = photoImage.cgImage
-                return true
-                
-            } else {
-                return false
-            }
-        } catch {
-            fatalError("The fetch could not be performed: \(error.localizedDescription)")
+        } else {
+            return false
         }
     }
     
@@ -76,14 +60,21 @@ extension Card {
         }
     }
     private func publishChangeEvent() {
+        changed = true
         NotificationCenter.default.post(name: Notification.Name(Constants.cardChanged), object: nil)
     }
     
     func handleSaveNotification(notification: Notification) {
+        // do nothing, if not changed
+        guard changed else {
+            return
+        }
+        changed = false
         // first save to the device in case the db save fails
         saveImage(card: self, viewController: self.viewController!)
         
         do {
+            print("id", id)
             try context?.save()
         } catch {
             // TODO: cleanup the saved image

@@ -15,7 +15,7 @@ func saveImage(
     let manager = FileManager.default
     
     // save to the file
-    if let fileUrl = getFileUrl(cardId: card.id!, viewController: viewController),
+    if let fileUrl = getFileUrl(cardId: card.id, viewController: viewController),
        let image = card.getImage() {
         manager.createFile(atPath: fileUrl.path, contents: UIImage(cgImage: image).jpegData(compressionQuality: 1.0))
     } else {

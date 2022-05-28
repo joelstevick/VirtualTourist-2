@@ -17,12 +17,11 @@ extension Card {
     }
 
     // MARK: - NSManaged properties
-    @NSManaged public var id: String?
+    @NSManaged public var id: String
     @NSManaged public var location: Location?
 
 }
 
 extension Card : Identifiable {
-
 }
 

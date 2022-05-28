@@ -19,6 +19,7 @@ public class Card: NSManagedObject {
     var image: CGImage?
     var viewController: UIViewController?
     var context: NSManagedObjectContext?
+    var changed = false
     
     deinit {
         removeSaveNotificationObserver()

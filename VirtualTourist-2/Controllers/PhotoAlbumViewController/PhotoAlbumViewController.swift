@@ -72,7 +72,7 @@ class PhotoAlbumViewController: UIViewController {
                 let card = Card(context: dataController.viewContext)
                 card.photoDownload = PhotoDownload(url: info.url, collectionView: self.collectionView, viewController: self, id: info.id)
                 
-                card.id = info.id
+                card.id = String(info.id)
                 
                 card.load(context: dataController.viewContext, viewController: self)
                 
@@ -108,5 +108,7 @@ class PhotoAlbumViewController: UIViewController {
     
     private func publishSaveEvent() {
         NotificationCenter.default.post(name: Notification.Name(Constants.save), object: nil)
+        
+        saveBtn.isEnabled = false
     }
 }
