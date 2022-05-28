@@ -11,4 +11,5 @@ struct Constants {
     public static let sideLength = 100.0
     public static let cardImages = "card-images"
     public static let cardPrefix = "card"
+    public static let cardChanged = "card-changed"
 }

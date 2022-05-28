@@ -15,6 +15,8 @@ extension Card {
         if !loadFromDevice(context: context, viewController: viewController) {
             if image == nil {
                 photoDownload?.download()
+                
+                publishChangeEvent()
             }
         }
     }
@@ -55,5 +57,9 @@ extension Card {
         } else {
             return photoDownload?.croppedImage
         }
+    }
+    
+    private func publishChangeEvent() {
+        NotificationCenter.default.post(name: Notification.Name(Constants.cardChanged), object: nil)
     }
 }

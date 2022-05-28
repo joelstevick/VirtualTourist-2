@@ -15,6 +15,7 @@ class PhotoAlbumViewController: UIViewController {
     var dataController: DataController!
     var photoInfo = [PhotoInfo]()
     var cards: [Card]?
+    var changeEventObserverToken: Any?
     
     // MARK: - Outlets
     @IBOutlet weak var noPicsLabel: UILabel!
@@ -51,6 +52,9 @@ class PhotoAlbumViewController: UIViewController {
         collectionView.collectionViewLayout = layout
         
         activityIndicator.startAnimating()
+        
+        // listen for change events: enable save button
+        changeEventObserverToken = NotificationCenter.default.addObserver(forName: Notification.Name(Constants.cardChanged),                                                                         object: nil, queue: nil, using: handleChangeNotification)
         // download the images
         Task {
             // get the photo URLs
@@ -79,7 +83,22 @@ class PhotoAlbumViewController: UIViewController {
             }
             collectionView.reloadData()
         }
-
+    }
+    deinit {
+        removeChangesNotificationObserver()
+    }
+    
+    // MARK: - Notification handling
+    func removeChangesNotificationObserver() {
+        if let token = changeEventObserverToken {
+            NotificationCenter.default.removeObserver(token)
+            
+            changeEventObserverToken = nil
+        }
+    }
+    
+    func handleChangeNotification(notification: Notification) {
+        saveBtn.isEnabled = true
     }
     
 }
