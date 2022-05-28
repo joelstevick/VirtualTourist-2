@@ -11,10 +11,16 @@ import UIKit
 
 extension Card {
     
-    func load() {
-        if image == nil {
-            photoDownload?.download()
+    func load(context: NSManagedObjectContext, viewController: UIViewController) {
+        if !loadFromDevice(context: context, viewController: viewController) {
+            if image == nil {
+                photoDownload?.download()
+            }
         }
+    }
+    
+    func loadFromDevice(context: NSManagedObjectContext, viewController: UIViewController) -> Bool {
+        return false
     }
     
     func getImage() -> CGImage? {
