@@ -26,6 +26,9 @@ extension MapViewController: MKMapViewDelegate  {
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         navigateToMapDetailView(view: view)
     }
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        navigateToMapDetailView(view: view)
+    }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard !(annotation is MKUserLocation) else {
             return nil // ignore current user location
@@ -39,6 +42,12 @@ extension MapViewController: MKMapViewDelegate  {
         }
         
         annotationView?.canShowCallout = true
+        
+        // create a button to make this easier to click
+        let rightButton = UIButton(type: .contactAdd)
+        rightButton.tag = annotation.hash
+
+        annotationView?.rightCalloutAccessoryView = rightButton
         
         return annotationView
     }
