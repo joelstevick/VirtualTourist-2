@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Card" representedClassName="Card" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="storedImage" optional="YES" attributeType="Binary"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="cards" inverseEntity="Location"/>
     </entity>
     <entity name="Location" representedClassName="Location" syncable="YES">
@@ -14,7 +15,7 @@
         <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Card" inverseName="location" inverseEntity="Card"/>
     </entity>
     <elements>
-        <element name="Card" positionX="-54" positionY="36" width="128" height="59"/>
+        <element name="Card" positionX="-54" positionY="36" width="128" height="74"/>
         <element name="Location" positionX="-63" positionY="-18" width="128" height="134"/>
     </elements>
 </model>
