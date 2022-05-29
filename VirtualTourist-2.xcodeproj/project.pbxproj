@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9351065D2843B77100289781 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9351065C2843B77100289781 /* Download.swift */; };
 		93D68F0A28402DAA00B158B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F0928402DAA00B158B3 /* AppDelegate.swift */; };
 		93D68F0C28402DAA00B158B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F0B28402DAA00B158B3 /* SceneDelegate.swift */; };
 		93D68F0E28402DAA00B158B3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D68F0D28402DAA00B158B3 /* MapViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9351065C2843B77100289781 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		93D68F0628402DAA00B158B3 /* VirtualTourist-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VirtualTourist-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D68F0928402DAA00B158B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D68F0B28402DAA00B158B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				93D68F7028410DF300B158B3 /* CropImage.swift */,
 				93D68F7F28424A8200B158B3 /* GetFileUrl.swift */,
 				93D68F812842693600B158B3 /* SaveImage.swift */,
+				9351065C2843B77100289781 /* Download.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				93D68F7128410DF300B158B3 /* CropImage.swift in Sources */,
 				93D68F6D2840FDD800B158B3 /* PhotoDownload.swift in Sources */,
 				93D68F5E2840D6C600B158B3 /* Search.swift in Sources */,
+				9351065D2843B77100289781 /* Download.swift in Sources */,
 				93D68F7A284236E000B158B3 /* Card+CoreDataClass.swift in Sources */,
 				93D68F5C2840D6C600B158B3 /* GetInfoRespone.swift in Sources */,
 				93D68F4C2840C5B000B158B3 /* PhotoAlbumViewController.swift in Sources */,
