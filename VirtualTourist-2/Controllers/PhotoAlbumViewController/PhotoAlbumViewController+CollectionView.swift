@@ -29,7 +29,6 @@ extension PhotoAlbumViewController: UICollectionViewDelegate, UICollectionViewDa
     
     // MARK: - data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(cards.count)
         return cards.count
     }
     

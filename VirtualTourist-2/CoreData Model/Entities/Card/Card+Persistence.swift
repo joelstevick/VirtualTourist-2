@@ -33,20 +33,15 @@ extension Card {
     func loadFromDevice(context: NSManagedObjectContext, viewController: UIViewController) -> Bool {
         
         // load the image from the device
-        let fileURL = getFileUrl(cardId: id, viewController: viewController)!
-        if let photoImage = UIImage(contentsOfFile: fileURL.path) {
-            
-            image = photoImage.cgImage
-            return true
-            
-        } else {
-            return false
-        }
+        dataToImage()
+        
+        return image != nil
     }
     
     func getImage() -> CGImage? {
+        print("has image", image != nil, photoDownload?.croppedImage != nil)
         if let image = image {
-            return image
+            return  canonicalizeImage(image)
         } else {
             return photoDownload?.croppedImage
         }
@@ -90,13 +85,12 @@ extension Card {
     }
     
     func save() {
-        // first save to the device in case the db save fails
-        saveImage(card: self, viewController: self.viewController!)
-        
+       
         do {
+            imageToData()
+            
             try context?.save()
             
-            image = photoDownload?.croppedImage
         } catch {
             // TODO: cleanup the saved image
             showError(viewController: viewController!, message: error.localizedDescription)

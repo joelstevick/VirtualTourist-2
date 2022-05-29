@@ -16,7 +16,7 @@ public class Card: NSManagedObject {
     //MARK: - custom properties
     var photoDownload: PhotoDownload?
     var saveNotificationObserverToken: Any?
-    var image: CGImage?
+    var image: UIImage?
     var viewController: UIViewController?
     var context: NSManagedObjectContext?
     var changed = false
