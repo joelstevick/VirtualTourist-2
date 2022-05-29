@@ -128,7 +128,7 @@ class PhotoAlbumViewController: UIViewController {
         self.cards.removeAll()
         
         // get the photo URLs
-        photoInfo = await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)
+        photoInfo = (await getPhotoUrls(coordinate: annotation.coordinate, viewController: self)).shuffled()
         
         // load the cards
         self.cards = photoInfo.map({ info in
